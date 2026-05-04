@@ -3,7 +3,7 @@ import json, random, time
 from datetime import datetime
 
 producer = KafkaProducer(
-    bootstrap_servers='localhost:29092',
+    bootstrap_servers='host.docker.internal:29092',
     value_serializer=lambda v: json.dumps(v).encode('utf-8')
 )
 
